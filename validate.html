@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form validation</title>
+	<link rel="stylesheet" type="text/css" href="validate.css">
+	
+</head>
+<body>
+<div id="wrapper">
+	<form method="POST" action="validate.php" onsubmit="return validateForm()" name="vform">
+		<div>
+			<input type="text" name="username" class="textInput" placeholder="username">
+			<div id="name_error" class="val_error"></div>
+		</div>
+		<div>
+			<input type="email" name="email" class="textInput" placeholder="email">
+			<div id="email_error" class="val_error"></div>
+		</div>
+		<div>
+			<input type="password" name="password" class="textInput" placeholder="password">
+		</div>
+		<div>
+			<input type="password" name="cpassword" class="textInput" placeholder="Confirm Password">
+			<div id="password_error" class="val_error"></div>
+		</div>
+		<div>
+			<input type="submit" name="register"  class="btn" value="register">
+		</div>
+		
+	</form>
+	<script src="validate.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Password length</title>
+</head>
+<body>
+<h1>password strength</h1>
+<label>Enter Password:</label>
+<input type="password" name="password" autocomplete="none" id="password">
+<progress value="0" max="100" id="strength" style="width: 230px"></progress>
+
+</body>
+
+<script type="text/javascript">
+	var pass =document.getElementById('password')
+   	pass.addEventListener('keyup', function(){
+   		checkPassword(pass.value)
+   	})
+   	function checkPassword(password) {
+   		var strengthBar = document.getElementById('strength')
+   		var strength = 0;
+   		if (password.match(/[a-zA-Z0-9][a-zA-Z0-9]+/)) {
+   			strength +=1
+   		}
+   		if (password.match(/[~<>?])+/) {
+   			strength +=1
+   		}
+   		if (password.match(/[!@$%^$*])) {}
+   		if (password.length > 5) {
+   			strength +=1
+   		}
+
+
+
+</script>
+
+</html>
